@@ -1,6 +1,6 @@
-package FactoryDesignPattern;
+package factorydesignpattern;
 
-public class WhatsappNotificationImpl implements notification{
+public class WhatsappNotificationImpl implements Notification {
     public void notifi() {
         System.out.println("We are going to send notification through WhatsApp..");
     }

@@ -1,7 +1,7 @@
-package FactoryDesignPattern;
+package factorydesignpattern;
 
-public abstract class notificationFactory {
-    abstract notification sendNotification();
+public abstract class NotificationFactory {
+    abstract Notification sendNotification();
 
     public void printNotification() {
         System.out.println("printing notification in Factory method");
