@@ -11,6 +11,9 @@ public class StudentUserImpl implements User{
         this.email = email;
     }
 
+    public StudentUserImpl() {
+    }
+
     public long getUtr() {
         return utr;
     }

@@ -1,15 +1,19 @@
 package solidexamplecode;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Book {
     String title,author,isbn;
-    boolean avaialability;
-
-    public Book(String title, String author, String isbn, boolean avaialability) {
+    public Book(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.avaialability = avaialability;
     }
+    Map<String,Integer> map = new HashMap<>();
+    List<Book> bookList = new ArrayList<>();
 
     public String getTitle() {
         return title;
@@ -35,20 +39,16 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public boolean isAvaialability() {
-        return avaialability;
+    public Map<String, Integer> bookAdded(String title, Book book) {
+        map.put(title,map.getOrDefault(title,0)+1);
+        bookList.add(book);
+        return map;
     }
-
-    public void setAvaialability(boolean avaialability) {
-        this.avaialability = avaialability;
-    }
-
-    public boolean bookAdded() {
-        //to be written
-        return true;
-    }
-    public boolean BookRemoved() {
-        // to be written
+    public boolean BookRemoved(String title) {
+        map.put(title,map.get(title)-1);
+        if(map.get(title)==0) {
+            map.remove(title);
+        }
         return true;
     }
     public boolean bookUpdated() {
