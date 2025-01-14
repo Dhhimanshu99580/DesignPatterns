@@ -39,10 +39,10 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public Map<String, Integer> bookAdded(String title, Book book) {
+    public List<Book> bookAdded(String title, Book book) {
         map.put(title,map.getOrDefault(title,0)+1);
         bookList.add(book);
-        return map;
+        return bookList;
     }
     public boolean BookRemoved(String title) {
         map.put(title,map.get(title)-1);
