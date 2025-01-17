@@ -48,4 +48,19 @@ public class StaffUserImpl implements User {
         // to be written;
         return true;
     }
+
+    @Override
+    public void addUser(User user) {
+
+    }
+
+    @Override
+    public void addBooksForTheUser(Book book) {
+
+    }
+
+    @Override
+    public void removeBooksForTheUser() {
+
+    }
 }
