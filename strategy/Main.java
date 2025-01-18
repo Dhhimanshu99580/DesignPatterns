@@ -12,7 +12,6 @@ public class Main {
             case 1: Payment payment = new CreditCardPaymentImpl();
                     contextToChooseAlgo.setContextToChooseAlgo(payment);
                     contextToChooseAlgo.pay();
-                    break;
             case 2: Payment payment1 = new UpiPaymentImpl();
                     contextToChooseAlgo.setContextToChooseAlgo(payment1);
                     contextToChooseAlgo.pay();
