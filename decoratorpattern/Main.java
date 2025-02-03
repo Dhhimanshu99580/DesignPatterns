@@ -5,9 +5,11 @@ public class Main {
         Notification notification = new NotificationImpl();
         notification = new SmsDecorator(notification);
         notification.sendNotification();
+
         Notification not = new NotificationImpl();
         not = new EmailDecorator(not);
         not.sendNotification();
+
         notification = new EmailDecorator(notification);
         notification.sendNotification();
     }
